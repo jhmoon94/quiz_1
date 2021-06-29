@@ -1,0 +1,21 @@
+<div class='form-group'>
+    <input 
+    type="url" 
+    class='form-control' 
+    name='image_url' 
+    placeholder='e.g. http://imgurl.com/qM6KaEy.gifv' 
+    value="<%= post ? post.image_url : '' %>"
+    />
+</div>
+<div class='form-group'>
+    <textarea
+    class='form-control' 
+    name='content' 
+    placeholder="Whatchoo cluckin' 'bout?"
+    cols='60'
+    rows='5'
+    >
+    <%- post ? post.content : '' %>
+    </textarea> 
+</div>
+

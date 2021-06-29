@@ -1,0 +1,23 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+    <div class="innerTopContainer">
+        <%- include('./partials/nav.ejs') %>
+    </div>
+    <div class="innerBottomContainer">
+        <div class="innerinnerBottomContainer">
+        <% if (!username) { %>
+            <input form="username" name="username" placeholder="Username">
+            <form id="username" action="/sign_in" method="POST">
+                <button class ='button' type="submit">Sign In</button> 
+            </form>
+            <% } else { %>
+                
+            <% } %>
+        </div>
+    </div> 
+</div>
+
+<%- include('./partials/footer.ejs') %>
+
+
+
