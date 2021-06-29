@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<div>
+    <% if (post.image_url) { %>
+      <img
+        src='<%= post.image_url %>'
+        alt='post image'
+      >
+    <% } %>
+    <div>
+      <h5><%= post.title %></h5>
+      <p>
+        <%= post.content %>
+        <em>Seen <%= post.view_count %> time(s)</em>
+        <em>Posted at <%= new Date(post.created_at).toLocaleString() %></em>
+      </p>
+      <form action='/posts/<%= post.id %>' method='POST'>
+        <input type='hidden' name='_method' value='DELETE'>
+        <input
+          type='submit'
+          value='Delete'
+        >
+      </form>
+      <a href='/posts/<%= post.id %>/edit'>Edit</a>
+    </div>
+  </div>
+<%- include('../partials/footer') %>

@@ -1,0 +1,26 @@
+<head>
+    <nav>
+        <ul class="ul">
+            <li>
+                <img style="height: 100%;" src="./images/chicken.png" alt="chicken">
+            </li>
+            <li>
+                <button>Cluck!</button> 
+            </li>
+            <% if (username) { %>
+            <li>
+                <span> <%- username %>  </span>
+            </li>
+            <li>
+                <form id="username" action="/sign_out" method="POST" class="form-inline">
+                    <button type="submit">Sign out</button> 
+                </form>
+            </li>
+            <% } else { %>
+            <li>
+                    <button>Sign In</button> 
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+</head>

@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+<h1>
+    New Post
+    <form action="/posts" method="POST">
+        <%-include('./partials/formInput')%>
+        <input type="submit" value="Create Post" class="btn btn-outline-dark">
+    </form>
+</h1>
+<%- include('../partials/footer') %>
